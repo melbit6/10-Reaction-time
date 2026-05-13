@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reaction Time Tester Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-window-wrap">
+      <section class="card">
+        <h1>Reaction Time Tester</h1>
+
+        <div class="button-row">
+          <button id="startBtn" type="button">Start Test</button>
+          <button id="nextRoundBtn" type="button">Next Round</button>
+          <button id="saveBtn" type="button">Save Session</button>
+          <button id="loadBtn" type="button">Load Session</button>
+          <button id="resetBtn" type="button">Reset Test</button>
+          <button id="backBtn" type="button">Back to Settings</button>
+        </div>
+
+        <div class="stats-grid game-stats-grid">
+          <div class="stat-box">
+            <span class="label">Player</span>
+            <span id="displayPlayer">-</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Round</span>
+            <span id="displayRound">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Score</span>
+            <span id="displayScore">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Best Time</span>
+            <span id="displayBestTime">-</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">Average Time</span>
+            <span id="displayAverageTime">-</span>
+          </div>
+          <div class="stat-box">
+            <span class="label">False Starts</span>
+            <span id="displayFalseStarts">0</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div id="ruleArea" class="rule-area">
+          Current round instruction will appear here.
+        </div>
+        <div id="messageArea" class="message-area">
+          Click Start Test when ready.
+        </div>
+      </section>
+
+      <section class="card">
+        <div id="signalArea" class="signal-area waiting">WAIT...</div>
+      </section>
+
+      <section class="card">
+        <h2>Round Results</h2>
+        <div id="resultsArea" class="results-area">No results yet.</div>
+      </section>
+
+      <section class="card">
+        <h2>Game Log</h2>
+        <div id="logArea" class="log-area"></div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
