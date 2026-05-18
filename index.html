@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reaction Time Tester Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Reaction Time Tester</h1>
+      <p>Configure the game, then open the game window.</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Game Setup</h2>
+
+        <form id="setupForm">
+          <div class="form-row">
+            <label for="playerName">Player Name</label>
+            <input
+              type="text"
+              id="playerName"
+              name="playerName"
+              maxlength="20"
+              placeholder="Enter player name"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" name="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="roundCount">Number of Rounds</label>
+            <select id="roundCount" name="roundCount">
+              <option value="5">5 rounds</option>
+              <option value="8" selected>8 rounds</option>
+              <option value="10">10 rounds</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Signal Type</legend>
+
+            <label class="option-line">
+              <input type="radio" name="signalType" value="click" checked />
+              Click Signal
+            </label>
+
+            <label class="option-line">
+              <input type="radio" name="signalType" value="spacebar" />
+              Spacebar Signal
+            </label>
+
+            <label class="option-line">
+              <input type="radio" name="signalType" value="mixed" />
+              Mixed
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Options</legend>
+
+            <label class="option-line">
+              <input type="checkbox" id="soundEnabled" checked />
+              Enable sound
+            </label>
+
+            <label class="option-line">
+              <input type="checkbox" id="falseStartPenalty" checked />
+              Penalise false starts
+            </label>
+
+            <label class="option-line">
+              <input type="checkbox" id="showAverage" checked />
+              Show average reaction time
+            </label>
+          </fieldset>
+
+          <div class="button-row">
+            <button type="button" id="openGameBtn">Open Game Window</button>
+            <button type="button" id="saveSettingsBtn">Save Settings</button>
+            <button type="button" id="loadSettingsBtn">Load Settings</button>
+            <button type="button" id="resetSettingsBtn">Reset Settings</button>
+            <button type="button" id="instructionsBtn">Instructions</button>
+          </div>
+        </form>
+
+        <div class="preview-box">
+          <h3>Live Preview</h3>
+          <p id="previewText">No settings selected yet.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Reaction Time Tester Launcher</p>
+    </footer>
+
+    <script src="launcher.js"></script>
+  </body>
+</html>
